@@ -45,4 +45,4 @@ if __name__ == '__main__':
     model.add(Dense(3, activation=tf.nn.softmax))
     model.compile(optimizer=tf.train.AdamOptimizer(), loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
-    model.fit(train_data,  train_labels, batch_size=64,  epochs=5, steps_per_epoch =1 )
+    model.fit(train_data,  train_labels, batch_size=512,  epochs=40)
