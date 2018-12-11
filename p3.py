@@ -49,4 +49,4 @@ if __name__ == '__main__':
 
     #evaluate the model
     results = model.evaluate(test_data, test_labels)
-
+    print results
