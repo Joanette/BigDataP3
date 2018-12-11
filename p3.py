@@ -16,7 +16,7 @@ def convert(arg, dtype):
 
 def load_data():
     colnames = ["tweets", "label"]
-    data = pd.read_csv("cleantextlabels7.csv", names=colnames)
+    data = pd.read_csv("home/joanette_rosario/DLSampleCode/text-classification/text10.csv", names=colnames)
 
     labels = data.label.tolist()
     tweets = data.tweets.tolist()
@@ -44,7 +44,7 @@ if __name__ == '__main__':
     (train_data, train_labels), (test_data, test_labels) = load_data()
     #print(train_data[0])
     #len(train_data[0]), len(train_data[1])
-  
+
     #define Tokenize with Vocab size
     #tokenizer = Tokenizer()
     #tokenizer.fit_on_texts(train_data)
