@@ -36,15 +36,17 @@ def load_data():
 
 if __name__ == '__main__':
     (train_data, train_labels), (test_data, test_labels) = load_data()
-
     model = Sequential()
     model.add(Embedding(100000, 16))
     model.add(GlobalAveragePooling1D())
     model.add(Dense(280, activation=tf.nn.relu))
-    model.add(Dense(512, activation=tf.nn.relu))
     model.add(Dense(512, activation=tf.nn.relu))
     model.add(Dense(16, activation=tf.nn.relu))
     model.add(Dense(3, activation=tf.nn.softmax))
     model.compile(optimizer=tf.train.AdamOptimizer(), loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
     model.fit(train_data,  train_labels, batch_size=512,  epochs=40)
+
+    #evaluate the model
+    results = model.evaluate(test_data, test_labels)
+
