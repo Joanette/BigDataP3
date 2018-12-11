@@ -16,7 +16,7 @@ def convert(arg, dtype):
 
 def load_data():
     colnames = ["tweets", "label"]
-    data = pd.read_csv("home/joanette_rosario/DLSampleCode/text-classification/text10.csv", names=colnames)
+    data = pd.read_csv("/home/joanette_rosario/DLSampleCode/text-classification/text10.csv", names=colnames)
 
     labels = data.label.tolist()
     tweets = data.tweets.tolist()
