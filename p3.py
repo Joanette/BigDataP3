@@ -40,7 +40,6 @@ if __name__ == '__main__':
     model.add(Embedding(100000, 16))
     model.add(GlobalAveragePooling1D())
     model.add(Dense(16, activation=tf.nn.relu))
-    model.add(GlobalAveragePooling1D())
     model.add(Dense(512, activation=tf.nn.relu))
     model.add(Dense(16, activation=tf.nn.relu))
     model.add(Dense(3, activation=tf.nn.softmax))
